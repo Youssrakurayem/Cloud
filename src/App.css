@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-link.active {
+  /* Your active link styles */
+  font-weight: bold;
+}
+

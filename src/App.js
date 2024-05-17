@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomePage from './HomePage';
+import BookApp from './BookApp'; // Assuming you already have BookApp.js
+import ArticleApp from './ArticleApp'; 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/book" element={<BookApp />} />
+          <Route path="/article" element={<ArticleApp />} />
+          {/* Add Route for ArticleApp when it's created */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
